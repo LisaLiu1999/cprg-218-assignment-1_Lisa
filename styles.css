@@ -12,10 +12,6 @@ body {
     color:#97bf04;
     text-align: center;
     padding:15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 .header-container h1 {
     margin: 15px;
@@ -23,7 +19,6 @@ body {
 
 /* General Main Content Styling */
 main {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +47,12 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
+    }
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     figure img {
         max-width: 100%;
@@ -66,20 +66,19 @@ footer {
 
 /* For devices less than 1000px wide but greater than 768px */
 @media screen and (min-width:768px) and (max-width:999px) {
+  
     .header-container
     {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
     }
     main {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-
     figure {
         display: flex;
         flex-direction: row;
@@ -110,6 +109,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         width: 100%;
     }
 
@@ -119,7 +119,6 @@ footer {
         flex-direction: row;
         justify-content:center;
         align-items: center;
-        padding: 20px;
         margin-bottom: 25px;
         width: 100%;
     }
@@ -127,22 +126,23 @@ footer {
     main {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex: 4;
     
     }
     figure {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 4;
     }  
     figure img {
         width: auto;
         height: auto;
         max-width: 300px;
         max-height: 300px;
-        margin-right: 20px;
+        margin: 20px;
     }
     aside {
         flex: 1;
